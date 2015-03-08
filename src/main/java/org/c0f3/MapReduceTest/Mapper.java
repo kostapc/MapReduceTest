@@ -5,6 +5,12 @@ import java.util.Map;
 /**
  * Created by KostaPC on 3/8/2015.
  */
-public interface Mapper {
-    public Map<Long,Object> map(Object sourceData);
+public abstract class Mapper implements Runnable{
+
+    public abstract Map<MRKey,MRObject> map(Object sourceData);
+
+    @Override
+    public void run() {
+
+    }
 }

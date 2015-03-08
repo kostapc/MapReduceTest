@@ -1,3 +1,4 @@
+import org.c0f3.MapReduceTest.processor.MRProcessor;
 import org.junit.Test;
 
 /**
@@ -7,6 +8,7 @@ public class MainTest {
 
     @Test
     public void test() {
+        MRProcessor mrProcessor = new MRProcessor();
 
     }
 }

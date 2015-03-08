@@ -7,5 +7,5 @@ import java.util.Map;
  * Created by KostaPC on 3/8/2015.
  */
 public interface Reducer {
-    public Object reduce(Map<Long,List<Object>> result);
+    public Object reduce(Map.Entry<MRKey,List<MRObject>> result);
 }

@@ -9,14 +9,14 @@ import java.util.*;
 import java.util.concurrent.*;
 
 /**
- * Created by KostaPC on 3/8/2015.
+ * KostaPC on 3/8/2015.
  */
 public class MRThreads {
 
     ExecutorService executor;
 
-    public MRThreads() {
-        executor = Executors.newFixedThreadPool(4);
+    public MRThreads(int threadsCount) {
+        executor = Executors.newFixedThreadPool(threadsCount);
     }
 
     public Collection reduce(Map<MRKey, List<MRObject>> mapResults, Reducer reducer) {

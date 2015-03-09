@@ -1,7 +1,11 @@
 package org.c0f3.MapReduceTest;
 
 /**
- * Created by KostaPC on 3/8/2015.
+ * KostaPC on 3/8/2015.
  */
-public class MRObject {
+public interface MRObject {
+
+    public void setValue(Object value);
+    public Object getValue();
+
 }

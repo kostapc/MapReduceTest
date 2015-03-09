@@ -31,19 +31,19 @@ public class MRThreads {
             e.printStackTrace();
             return null;
         }
-        List reduceResults = new LinkedList<>();
+        List<Object> reduceResults = new LinkedList<>();
         for(Future<Object> future : allResults) {
             try {
-                reduceResults.add(future.get());
-            } catch (InterruptedException e) {
+                Object reduceResult = future.get();
+                if(reduceResult==null) {
+                    continue;
+                }
+                reduceResults.add(reduceResult); // waiting for task is end;
+            } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
-                continue;
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-                continue;
             }
         }
-        return null;
+        return reduceResults;
     }
 
     public Map<MRKey,List<MRObject>> map(Object[] sources, Mapper mapper) {
@@ -63,6 +63,9 @@ public class MRThreads {
             Map<MRKey, MRObject> result;
             try {
                 result = future.get(); // waiting for task is end;
+                if(result==null) {
+                    continue;
+                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
                 continue;

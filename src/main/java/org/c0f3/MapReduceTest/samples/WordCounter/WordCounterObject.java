@@ -3,7 +3,7 @@ package org.c0f3.MapReduceTest.samples.WordCounter;
 import org.c0f3.MapReduceTest.MRObject;
 
 /**
- * Created by KostaPC on 3/10/2015.
+ * KostaPC on 3/10/2015.
  */
 public class WordCounterObject implements MRObject {
 

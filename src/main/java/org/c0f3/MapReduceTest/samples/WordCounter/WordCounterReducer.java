@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by KostaPC on 3/10/2015.
+ * KostaPC on 3/10/2015.
  */
 public class WordCounterReducer implements Reducer {
 

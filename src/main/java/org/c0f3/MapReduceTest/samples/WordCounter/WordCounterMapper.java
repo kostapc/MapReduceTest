@@ -18,7 +18,7 @@ import java.util.Map;
 public class WordCounterMapper implements Mapper {
 
     @Override
-    public Map<MRKey, MRObject> map(Object sourceData) {
+    public Map<MRKey, MRObject<Integer>> map(Object sourceData) {
         if(!(sourceData instanceof String)) {
             return null;
         }
@@ -31,17 +31,17 @@ public class WordCounterMapper implements Mapper {
         }
 
         page = clearHtml(page);
-        page.replace("\n","");
+        page = page.replace("\n","");
         String[] words = page.split(" ");
-        Map<MRKey, MRObject> mapResult = new HashMap<>();
+        Map<MRKey, MRObject<Integer>> mapResult = new HashMap<>();
         for (String word: words) {
             WordCounterKey key = new WordCounterKey(word.trim());
-            WordCounterObject object = (WordCounterObject) mapResult.get(key);
+            MRObject<Integer> object = mapResult.get(key);
             if(object == null) {
                 object = new WordCounterObject(0);
                 mapResult.put(key,object);
             }
-            object.add(1);
+            object.setValue(1 + object.getValue());
         }
         return mapResult;
     }
@@ -60,6 +60,6 @@ public class WordCounterMapper implements Mapper {
 
     private String clearHtml(String source) {
         return source
-                .replaceAll("<style.+?>.+?</style>|<script.+?>.+?</script>|<(?:!|/?[a-zA-Z]+).*?/?>","");
+                .replaceAll("<style.+?>.+?</style>|<script.+?>.+?</script>|<(?:!|/?[a-zA-Z]+).*?/?>", "");
     }
 }

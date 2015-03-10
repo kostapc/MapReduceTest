@@ -5,7 +5,7 @@ import org.c0f3.MapReduceTest.MRObject;
 /**
  * KostaPC on 3/10/2015.
  */
-public class WordCounterObject implements MRObject {
+public class WordCounterObject implements MRObject<Integer> {
 
     private Integer count;
 
@@ -14,14 +14,12 @@ public class WordCounterObject implements MRObject {
     }
 
     @Override
-    public void setValue(Object value) {
-        if(value instanceof Number) {
-            count = ((Number) value).intValue();
-        }
+    public void setValue(Integer value) {
+        count = value;
     }
 
     @Override
-    public Object getValue() {
+    public Integer getValue() {
         return count;
     }
 

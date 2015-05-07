@@ -1,8 +1,8 @@
-package org.c0f3.MapReduceTest.samples.WordCounter;
+package net.c0f3.SimpleMapReduce.samples.WordCounter;
 
-import org.c0f3.MapReduceTest.MRKey;
-import org.c0f3.MapReduceTest.MRObject;
-import org.c0f3.MapReduceTest.Reducer;
+import net.c0f3.SimpleMapReduce.Reducer;
+import net.c0f3.SimpleMapReduce.MRKey;
+import net.c0f3.SimpleMapReduce.MRObject;
 
 import java.util.AbstractMap;
 import java.util.List;

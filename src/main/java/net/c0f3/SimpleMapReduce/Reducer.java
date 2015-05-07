@@ -1,4 +1,4 @@
-package org.c0f3.MapReduceTest;
+package net.c0f3.SimpleMapReduce;
 
 import java.util.List;
 import java.util.Map;

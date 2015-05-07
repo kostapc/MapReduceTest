@@ -1,9 +1,9 @@
-package org.c0f3.MapReduceTest.processor;
+package net.c0f3.SimpleMapReduce.processor;
 
-import org.c0f3.MapReduceTest.MRKey;
-import org.c0f3.MapReduceTest.MRObject;
-import org.c0f3.MapReduceTest.Mapper;
-import org.c0f3.MapReduceTest.Reducer;
+import net.c0f3.SimpleMapReduce.MRKey;
+import net.c0f3.SimpleMapReduce.MRObject;
+import net.c0f3.SimpleMapReduce.Mapper;
+import net.c0f3.SimpleMapReduce.Reducer;
 
 import java.util.*;
 import java.util.concurrent.*;

@@ -1,6 +1,6 @@
-package org.c0f3.MapReduceTest.samples.WordCounter;
+package net.c0f3.SimpleMapReduce.samples.WordCounter;
 
-import org.c0f3.MapReduceTest.MRKey;
+import net.c0f3.SimpleMapReduce.MRKey;
 
 /**
  * KostaPC on 3/10/2015.

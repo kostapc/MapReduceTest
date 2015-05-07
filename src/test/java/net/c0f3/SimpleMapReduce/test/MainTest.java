@@ -1,7 +1,8 @@
+package net.c0f3.SimpleMapReduce.test;
 
-import org.c0f3.MapReduceTest.processor.MRProcessor;
-import org.c0f3.MapReduceTest.samples.WordCounter.WordCounterMapper;
-import org.c0f3.MapReduceTest.samples.WordCounter.WordCounterReducer;
+import net.c0f3.SimpleMapReduce.processor.MRProcessor;
+import net.c0f3.SimpleMapReduce.samples.WordCounter.WordCounterMapper;
+import net.c0f3.SimpleMapReduce.samples.WordCounter.WordCounterReducer;
 import org.junit.Test;
 
 import java.util.Collection;
